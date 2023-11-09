@@ -8,7 +8,7 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const token = await hre.ethers.deployContract("MetaToken");
+  const token = await hre.ethers.deployContract("NFTmapped", ["Mytokens", "MTK"]);
 
   console.log("Token address:", await token.getAddress());
 }
